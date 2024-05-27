@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: radial-gradient(
+    circle at 111.24% 14.64%,
+    #a0defd 0,
+    #6abce4 25%,
+    #0097c9 50%,
+    #0073ae 75%,
+    #005597 100%
+  );
+  height: 250px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  gap: 30px;
+  height: 250px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 30px;
+  border-radius: 20px;
+}
+h1 {
+  background-color: #00569791;
+  background-image: radial-gradient(
+    circle at 111.24% 14.64%,
+    #83bdda 0,
+    #6abbe4 25%,
+    #0097c9 50%,
+    #0073ae 75%,
+    #005597 100%
+  );
+  box-shadow: 6px 10px 5px 2px rgba(8, 46, 82, 0.59);
+  -webkit-box-shadow: 6px 10px 5px 2px rgba(8, 46, 82, 0.59);
+  -moz-box-shadow: 6px 10px 5px 2px rgba(8, 46, 82, 0.59);
+  font-size: 100px;
+  position: relative;
+  right: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  user-select: none;
+}
+.search-contianer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-contianer input {
+  background-color: rgba(240, 248, 255, 0);
+  border-top: none;
+  border-bottom:1px solid black;
+  height: 45px;
+  width: 300px;
+  border-radius: 40px;
+  padding-left: 20px;
+}
+.search-contianer button {
+  border-top: none;
+  height: 25px;
+  width: 30px;
+  background-color: rgb(54, 138, 207);
+  border-radius: 40px;
+}
+.search-contianer button i {
+  background-color: rgba(45, 92, 114, 0);
+  font-size: 15px;
+  border: none;
+}
+section {
+  margin-top: 60px;
+}
+.container-Img {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+.imagenes {
+  box-shadow: 6px 10px 5px 2px rgba(8, 46, 82, 0.59);
+  -webkit-box-shadow: 6px 10px 5px 2px rgba(8, 46, 82, 0.096);
+
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  transform: 2s all;
+  transition: 1s ease;
+  border-radius: 20px;
+}
+.imagenes:hover {
+  height: 300px;
+}
