@@ -1,8 +1,14 @@
 const input = document.querySelector("#searchImg");
 const search = document.querySelector("#search");
 const containerImg = document.querySelector("#gallery");
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", async function () {
   const query = input.value.trim();
+  input.focus();
   if (!query) {
     await searchmIg("Paisajes");
   } else {
@@ -12,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 search.addEventListener("click", function () {
   const query = input.value.trim();
-  searchmIg(query)
+  searchmIg(query);
 });
 
 async function searchmIg(query) {
