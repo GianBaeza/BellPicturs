@@ -1,12 +1,18 @@
 const input = document.querySelector("#searchImg");
 const search = document.querySelector("#search");
 const containerImg = document.querySelector("#gallery");
-
-search.addEventListener("click", async function () {
+document.addEventListener("DOMContentLoaded", async function () {
   const query = input.value.trim();
-  if (query) {
+  if (!query) {
+    await searchmIg("Paisajes");
+  } else {
     await searchmIg(query);
   }
+});
+
+search.addEventListener("click", function () {
+  const query = input.value.trim();
+  searchmIg(query)
 });
 
 async function searchmIg(query) {
@@ -41,7 +47,6 @@ function updateGarelly(photos) {
     img.loading = "lazy";
     containerImg.appendChild(img);
   });
-
 }
 
 function handleError(error) {
