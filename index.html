@@ -9,12 +9,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <h1>BellPicturs</h1>
-      <div class="search-contianer">
+      <form class="search-contianer">
         <input
           class="serch bi bi-search"
           type="text"
@@ -22,11 +30,10 @@
           placeholder="Buscar Imagenes..."
         />
         <button id="search"><i class="bi bi-search"></i></button>
-      </div>
+      </form>
     </header>
     <section>
       <div class="container-Img" id="gallery"></div>
-     
     </section>
     <script src="/script.js"></script>
   </body>
