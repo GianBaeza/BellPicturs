@@ -13,12 +13,6 @@ search.addEventListener("click", function (event) {
     getData("paisajes");
   }
 });
-cardDiv.addEventListener("mouseover", () => {
-  title.style.opacity = 1; // Mostrar el nombre del auto
-});
-cardDiv.addEventListener("mouseout", () => {
-  title.style.opacity = 0; // Ocultar el nombre del auto
-});
 
 function getData(value) {
   const url = `https://api.unsplash.com/search/photos?&query=${value}&client_id=${API_KEY}`;
@@ -64,7 +58,7 @@ function displayImages(imgData) {
     cardImg.classList.add("imagenes");
 
     //titleimagen hover
-    const title = document.createElement("p");
+    const title = document.createElement("h3");
     title.textContent = name;
     title.classList.add("title-img-hover");
 

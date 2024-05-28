@@ -104,15 +104,21 @@ section {
   height: 300px;
 }
 .title-img-hover {
-  background-color: aqua;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background-color: #00000040;
+  color: aliceblue;
+  font-weight: 300;
+  bottom: 65px;
   display: flex;
   justify-content: center;
-  position: relative;
-  bottom: 50px;
   border-radius: 20px;
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  transition: opacity 0.3s ease;
+  transition: 0.5s ease-in-out bottom;
+}
+.title-img-hover :hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out bottom;
 }
 
 @media only screen and (max-width: 490px) {
