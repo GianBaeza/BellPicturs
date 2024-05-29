@@ -67,3 +67,10 @@ function displayImages(imgData) {
     containerImgs.appendChild(contianerCardImg);
   });
 }
+//Corregir esto 
+contianerCardImg.addEventListener("mouseover", () => {
+  title.classList.add("title-img-hover"); // Mostramos el título cuando el mouse pasa sobre la imagen
+});
+contianerCardImg.addEventListener("mouseout", () => {
+  title.classList.remove("title-img-hover"); // Ocultamos el título cuando el mouse sale de la imagen
+});
