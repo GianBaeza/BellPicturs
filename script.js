@@ -1,6 +1,6 @@
 const input = document.querySelector("#searchImg");
 const search = document.querySelector("#search");
-const containerImgs = document.querySelector("#gallery");
+const containerGallery = document.querySelector("#gallery");
 const API_KEY = "_ATNM3_x9bOySNge2mZSpKvdW58LCuIF8TYveLyIczY";
 
 search.addEventListener("click", function (event) {
@@ -8,14 +8,13 @@ search.addEventListener("click", function (event) {
   const valueSearch = input.value.trim();
   if (valueSearch) {
     getData(valueSearch);
-  } else {
-    const a = "minimalist";
-    getData("paisajes");
   }
 });
 
+
 function getData(value) {
-  const url = `https://api.unsplash.com/search/photos?&query=${value}&client_id=${API_KEY}`;
+  const per_page = 20;
+  const url = `https://api.unsplash.com/search/photos?&query=${value}&client_id=${API_KEY}&per_page=${per_page}`;
   fetch(url, {
     method: "GET",
     headers: {
@@ -46,31 +45,23 @@ function getData(value) {
 }
 
 function displayImages(imgData) {
-  containerImgs.innerHTML = " ";
-  imgData.forEach(({ id, alt_description, photo, name }) => {
-    //containerCard
-    const contianerCardImg = document.createElement("div");
-    containerImgs.classList.add("container-Img");
-    //immagen
-    const cardImg = document.createElement("img");
-    cardImg.src = photo;
-    cardImg.alt = alt_description;
-    cardImg.classList.add("imagenes");
+  containerGallery.innerHTML = "";
 
-    //titleimagen hover
+  imgData.forEach(({ id, alt_description, photo, name }) => {
+    const containerCardImg = document.createElement("div");
+    containerCardImg.classList.add("cardImg");
+
+    const img = document.createElement("img");
+    img.src = photo;
+    img.alt = alt_description;
+    img.classList.add("img");
+
     const title = document.createElement("h3");
     title.textContent = name;
-    title.classList.add("title-img-hover");
+    title.classList.add("title-img");
 
-    contianerCardImg.appendChild(cardImg);
-    contianerCardImg.appendChild(title);
-    containerImgs.appendChild(contianerCardImg);
+    containerCardImg.appendChild(img);
+    containerCardImg.appendChild(title);
+    containerGallery.appendChild(containerCardImg);
   });
 }
-//Corregir esto 
-contianerCardImg.addEventListener("mouseover", () => {
-  title.classList.add("title-img-hover"); // Mostramos el título cuando el mouse pasa sobre la imagen
-});
-contianerCardImg.addEventListener("mouseout", () => {
-  title.classList.remove("title-img-hover"); // Ocultamos el título cuando el mouse sale de la imagen
-});
