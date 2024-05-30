@@ -9,19 +9,23 @@ body {
   background: rgb(255, 255, 255);
 }
 header {
-  height: 250px;
-  width: 500px;
+  height: 400px;
+  width: 100%;
+  background-image: url(./img/backgrundheader.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   margin: auto;
-  flex-direction: column;
-  border-radius: 20px;
-  padding-top: 40px;
+ flex-direction: column;
+  padding-top: 50px;
 }
 h1 {
-  text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 4px 1px 2px rgba(255, 245, 245, 0.486);
+  color: #fff;
   font-size: 100px;
   position: relative;
   right: 0px;
@@ -76,6 +80,31 @@ input :hover {
   padding-right: 10px;
   padding-left: 5px;
 }
+.container-Lista {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 30px;
+  justify-content: center;
+  margin-top: 120px;
+}
+.container-Lista ul {
+  background-color: aqua;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  list-style-type: none
+}
+.container-Lista li a {
+  padding: 5px auto;
+  font-size: 20px;
+  
+}
+
+/* container imagenes*/
 section {
   margin-top: 60px;
 }
@@ -133,7 +162,7 @@ section {
   font-family: "Exo", sans-serif;
 }
 
-.cardImg:hover .title-img{
+.cardImg:hover .title-img {
   opacity: 1;
   visibility: visible;
 }
@@ -166,7 +195,7 @@ section {
   .search-container {
     margin-top: 20px;
   }
-  .search-container input{
+  .search-container input {
     background-color: rgb(112, 112, 112);
     width: 20px;
     height: 20px;
