@@ -2,7 +2,10 @@ const input = document.querySelector("#searchImg");
 const search = document.querySelector("#search");
 const containerGallery = document.querySelector("#gallery");
 const API_KEY = "_ATNM3_x9bOySNge2mZSpKvdW58LCuIF8TYveLyIczY";
-
+document.addEventListener("DOMContentLoaded",function(){
+  getData('plantas')
+  input.focus()
+})
 search.addEventListener("click", function (event) {
   event.preventDefault();
   const valueSearch = input.value.trim();

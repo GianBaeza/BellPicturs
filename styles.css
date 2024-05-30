@@ -6,10 +6,9 @@
 body {
   height: 100vh;
   width: 100%;
-  background: rgb(255, 255, 255);
 }
 header {
-  height: 400px;
+  height: 490px;
   width: 100%;
   background-image: url(./img/backgrundheader.jpg);
   background-repeat: no-repeat;
@@ -20,29 +19,49 @@ header {
   flex-wrap: wrap;
   align-items: center;
   margin: auto;
- flex-direction: column;
+  flex-direction: column;
   padding-top: 50px;
 }
 h1 {
+  background-color: #ffffff00;
   text-shadow: 4px 1px 2px rgba(255, 245, 245, 0.486);
   color: #fff;
-  font-size: 100px;
+  font-size: 50px;
   position: relative;
-  right: 0px;
+  right: 700px;
+  bottom: 90px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 30px;
   user-select: none;
   font-family: "Satisfy", cursive;
+  margin-top: 40px;
 }
-.search-contianer {
+header p {
+  background-color: #ffffff00;
+  width: 25%;
+  height: 120px;
+  color: #ffffff;
   display: flex;
   flex-wrap: wrap;
+  font-size: 35px;
+  font-family: "Poetsen One", sans-serif;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 70px;
+}
+.search-contianer {
+  background-color: #ffffff00;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
 }
 .search-contianer input {
-  background-color: #dcdddd8c;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dcdddd7e;
   border: none;
   height: 45px;
-  width: 290px;
+  width: 460px;
   -webkit-border-top-left-radius: 50px;
   -webkit-border-bottom-left-radius: 50px;
   -moz-border-radius-topleft: 50px;
@@ -52,6 +71,7 @@ h1 {
   padding-left: 20px;
   transition: 1ms ease-in;
   outline: none;
+  margin-top: 50px;
 }
 input::placeholder {
   color: #00000071;
@@ -63,7 +83,7 @@ input :hover {
 
 .search-contianer button {
   height: 45px;
-  background-color: #dcdddd8c;
+  background-color: #dcdddd75;
   -webkit-border-top-right-radius: 50px;
   -webkit-border-bottom-right-radius: 50px;
   -moz-border-radius-topright: 50px;
@@ -71,6 +91,7 @@ input :hover {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: none;
+  margin-top: 50px;
 }
 .search-contianer button i {
   background-color: rgba(45, 92, 114, 0);
@@ -81,40 +102,47 @@ input :hover {
   padding-left: 5px;
 }
 .container-Lista {
-  background-color: #fff;
+  background-color: #c51e1e00;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 30px;
+  height: 80px;
   justify-content: center;
-  margin-top: 120px;
+  padding-top: 30px;
 }
 .container-Lista ul {
-  background-color: aqua;
-  width: 40%;
+  background-color: rgba(0, 255, 255, 0);
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
-  list-style-type: none
+  gap: 100px;
+  list-style-type: none;
 }
 .container-Lista li a {
   padding: 5px auto;
   font-size: 20px;
-  
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poetsen One", sans-serif;
+  font: weight 10px;
+}
+.container-Lista li a:hover {
+  color: rgb(0, 0, 0);
 }
 
 /* container imagenes*/
 section {
-  margin-top: 60px;
+  display: grid;
 }
 .container-gallery {
+  background-color: rgba(0, 0, 0, 0);
   height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 10px;
+  gap: 20px;
+  padding: 50px 40px 0px;
   box-sizing: border-box;
   overflow-y: hidden;
   max-width: 100%;
