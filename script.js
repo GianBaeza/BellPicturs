@@ -3,10 +3,19 @@ const search = document.querySelector("#search");
 const containerGallery = document.querySelector("#gallery");
 const API_KEY = "_ATNM3_x9bOySNge2mZSpKvdW58LCuIF8TYveLyIczY";
 const navLinks = document.querySelectorAll(".nav-link");
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
+abrir.addEventListener("click", () => {
+  nav.classList.add("nav-visible");
+});
+cerrar.addEventListener('click', ()=>{
+  nav.classList.remove("nav-visible")
+})
 document.addEventListener("DOMContentLoaded", function () {
   getNav(navLinks);
-  getData("minimalist");
+  getData("");
   input.focus();
 });
 
@@ -72,13 +81,12 @@ function displayImages(imgData) {
   });
 }
 
-//modal Imagenes 
+//modal Imagenes
 function showModal() {
   const modal = document.getElementById("modal");
   const modalImage = document.getElementById("modal-image");
   containerGallery.forEach((card) => {});
 }
-
 
 //funciones nav
 function getNav(nav) {
