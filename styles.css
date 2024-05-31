@@ -22,19 +22,19 @@ header {
   flex-direction: column;
   padding-top: 50px;
 }
-h1 {
+.title {
   background-color: #ffffff00;
-  text-shadow: 4px 1px 2px rgba(255, 245, 245, 0.486);
-  color: #fff;
+  text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.733);
+  color: #ffffff;
   font-size: 50px;
   position: relative;
   right: 700px;
-  bottom: 90px;
+  bottom: 70px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 30px;
   user-select: none;
   font-family: "Satisfy", cursive;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 header p {
   background-color: #ffffff00;
@@ -93,6 +93,7 @@ input :hover {
   border: none;
   margin-top: 50px;
 }
+
 .search-contianer button i {
   background-color: rgba(45, 92, 114, 0);
   color: #00000071;
@@ -123,9 +124,11 @@ input :hover {
   padding: 5px auto;
   font-size: 20px;
   text-decoration: none;
-  color: #000000;
-  font-family: "Poetsen One", sans-serif;
-  font: weight 10px;
+  color: #252525be;
+  font-family: "Poetsen One";
+  font: weight 400;
+  transform: rotate(-45deg);
+  cursor: pointer;
 }
 .container-Lista li a:hover {
   color: rgb(0, 0, 0);
@@ -194,17 +197,56 @@ section {
   opacity: 1;
   visibility: visible;
 }
+
+
+modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media only screen and (max-width: 768px) {
   .container-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media only screen and (max-width: 600px) {
-  .container-gallery {
-    grid-template-columns: repeat(2, 1fr);
+  header {
+    width: 100%;
+    padding-top: 20px;
   }
 }
-@media only screen and (max-width: 490px) {
+@media only screen and (max-width: 600px) {
   body {
     height: 100vh;
     display: grid;
@@ -228,6 +270,34 @@ section {
     width: 20px;
     height: 20px;
   }
+  .search-container button {
+    width: 50%;
+  }
+  .container-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 490px) {
+  body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: hsla(213, 77%, 14%, 1);
+    background-color: #fff;
+  }
+  header {
+    width: 100%;
+    padding-top: 20px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .search-container {
+    margin-top: 20px;
+    width: auto;
+  }
+  
   .search-container button {
     width: 50%;
   }

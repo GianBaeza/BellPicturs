@@ -2,10 +2,14 @@ const input = document.querySelector("#searchImg");
 const search = document.querySelector("#search");
 const containerGallery = document.querySelector("#gallery");
 const API_KEY = "_ATNM3_x9bOySNge2mZSpKvdW58LCuIF8TYveLyIczY";
-document.addEventListener("DOMContentLoaded",function(){
-  getData('plantas')
-  input.focus()
-})
+const navLinks = document.querySelectorAll(".nav-link");
+
+document.addEventListener("DOMContentLoaded", function () {
+  getNav(navLinks);
+  getData("minimalist");
+  input.focus();
+});
+
 search.addEventListener("click", function (event) {
   event.preventDefault();
   const valueSearch = input.value.trim();
@@ -13,7 +17,6 @@ search.addEventListener("click", function (event) {
     getData(valueSearch);
   }
 });
-
 
 function getData(value) {
   const per_page = 20;
@@ -66,5 +69,24 @@ function displayImages(imgData) {
     containerCardImg.appendChild(img);
     containerCardImg.appendChild(title);
     containerGallery.appendChild(containerCardImg);
+  });
+}
+
+//modal Imagenes 
+function showModal() {
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+  containerGallery.forEach((card) => {});
+}
+
+
+//funciones nav
+function getNav(nav) {
+  nav.forEach(function (link) {
+    link.addEventListener("click", function () {
+      const section = link.id;
+
+      getData(section);
+    });
   });
 }
