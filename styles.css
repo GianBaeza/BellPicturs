@@ -34,14 +34,16 @@ header {
 }
 header p {
   background-color: #c70b0b00;
-  width: 400px;
-  height: 200px;
+  width: 650px;
+  height: 250px;
   margin: auto;
-  color: #ffffff;
-  font-size: 30px;
+  color: #fffffff8;
+  font-size: 40px;
   font-family: "Poetsen One", sans-serif;
   text-align: left;
   user-select: none;
+  padding: 5px;
+  padding-left: 50px;
 }
 .search-contianer {
   background-color: #00000000;
@@ -96,7 +98,7 @@ input :hover {
   padding-left: 5px;
 }
 .container-Nav {
-  background-color: #bbb;
+  background-color: #bbbbbb00;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -257,7 +259,7 @@ modal {
     width: auto;
     height: 150px;
     margin: auto;
-    color: #ffffff;
+    color: #ffffffc2;
     font-size: 25px;
     font-family: "Poetsen One", sans-serif;
     text-align: center;
@@ -350,7 +352,7 @@ modal {
     width: auto;
     height: 150px;
     margin: auto;
-    color: #ffffff;
+    color: #ffffffc2;
     font-size: 25px;
     font-family: "Poetsen One", sans-serif;
     text-align: center;
@@ -444,7 +446,7 @@ modal {
     width: auto;
     height: 150px;
     margin: auto;
-    color: #ffffff;
+    color: #ffffffc2;
     font-size: 25px;
     font-family: "Poetsen One", sans-serif;
     text-align: center;
