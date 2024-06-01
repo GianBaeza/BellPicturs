@@ -10,12 +10,12 @@ const cerrar = document.querySelector("#cerrar");
 abrir.addEventListener("click", () => {
   nav.classList.add("nav-visible");
 });
-cerrar.addEventListener('click', ()=>{
-  nav.classList.remove("nav-visible")
-})
+cerrar.addEventListener("click", () => {
+  nav.classList.remove("nav-visible");
+});
 document.addEventListener("DOMContentLoaded", function () {
   getNav(navLinks);
-  getData("");
+  getData("interior casas");
   input.focus();
 });
 
