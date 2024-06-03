@@ -29,6 +29,9 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () => {
   nav.classList.remove("nav-visible");
 });
+
+//abrir y cerrar modal
+
 // urlFetch
 function buildUrl(query) {
   const per_page = 20;
@@ -75,7 +78,11 @@ function displayImages(imgData) {
     const img = document.createElement("img");
     img.src = photo;
     img.alt = alt_description;
+    img.style.cursor = "pointer";
     img.classList.add("img");
+    img.addEventListener("click", function () {
+      openModal(photo, name, alt_description);
+    });
 
     const title = document.createElement("h3");
     title.textContent = name;
@@ -88,9 +95,52 @@ function displayImages(imgData) {
 }
 
 // ModalImagenes
-function showModal() {}
+function openModal(photo, name, alt_description) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
 
-// Funcionesnav
+  const containerInfoImg = document.createElement("div");
+  containerInfoImg.classList.add("container-info-img");
+
+  const modalImage = document.createElement("img");
+  modalImage.classList.add("img-content");
+  modalImage.src = photo;
+
+  const infoModal = document.createElement("div");
+  infoModal.classList.add("info-modal");
+
+  const titleModal = document.createElement("h1");
+  titleModal.classList.add("title-modal");
+  titleModal.textContent = name;
+
+  const titleH3Modal = document.createElement("h3");
+  titleH3Modal.classList.add("title-h3-modal");
+  titleH3Modal.textContent = "Description :";
+
+  const titleDescriptionModal = document.createElement("p");
+  titleDescriptionModal.classList.add("title-description-modal");
+  titleDescriptionModal.textContent = alt_description;
+
+  infoModal.appendChild(titleModal);
+  infoModal.appendChild(titleH3Modal);
+  infoModal.appendChild(titleDescriptionModal);
+
+  containerInfoImg.appendChild(modalImage);
+  containerInfoImg.appendChild(infoModal);
+
+  modal.appendChild(containerInfoImg);
+  document.body.appendChild(modal);
+
+  modal.style.display = "flex";
+  document.addEventListener("click", closeModal);
+}
+function closeModal(e) {
+  const modal = document.querySelector(".modal");
+  if (e.target === modal) {
+    modal.classList.remove("modal");
+    modal.parentNode.removeChild(modal);
+  }
+}
 function getNav(navLinks) {
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {

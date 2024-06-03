@@ -98,7 +98,7 @@ input :hover {
   padding-left: 5px;
 }
 .container-Nav {
-  background-color: #bbbbbb00;
+  background-color: #ca090900;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -147,7 +147,7 @@ container imagenes section {
 .container-gallery {
   background-color: rgba(0, 0, 0, 0);
   height: auto;
-  width: 100%;
+  width: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -206,25 +206,62 @@ container imagenes section {
   visibility: visible;
 }
 
-modal {
+.modal {
   display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(10, 226, 46, 0.918);
+}
+.container-info-img {
+  height: auto;
+  background-color: #fffffff5;
+  width: auto;
+  margin-right: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 8px 10px 11px -1px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 8px 10px 11px -1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 10px 11px -1px rgba(0, 0, 0, 1);
+}
+.img-content {
+  background-image: url(./img/ejemplomodal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  width: auto;
+  border-radius: 20px;
+  border: none;
+}
+.info-modal {
+  background-color: #00000000;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "PT Sans", sans-serif;
+}
+.title-modal {
+  font-family: "Poetsen One", sans-serif;
+  background-color: #c5101000;
+  height: 100px;
+  font-size: 30px;
+}
+.title-h3-modal {
+  font-size: 20px;
+  font-family: "Poetsen One", sans-serif;
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+.title-description-modal {
+  font-size: 17px;
+  text-align: left;
 }
 
 .close {
@@ -245,7 +282,7 @@ modal {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 850px) {
   .title {
     background-color: #00000000;
     font-size: 35px;
@@ -452,10 +489,7 @@ modal {
     text-align: center;
     padding: 10px;
   }
-  .container-Nav {
-    height: 50px;
-    background-color: #bbbbbb00;
-  }
+
   .abrir-menu,
   .cerrar-menu {
     display: block;
@@ -478,7 +512,7 @@ modal {
     display: flex;
     flex-direction: column;
     align-items: end;
-    background-color: #dcddddd8;
+    background-color: #dcdddde3;
     width: 100%;
     position: absolute;
     top: 0;
@@ -490,6 +524,7 @@ modal {
     visibility: hidden;
   }
   .nav-visible {
+    background-color: rgba(238, 231, 230, 0.952);
     opacity: 1;
     visibility: visible;
     animation: slideDown 0.5s ease-in-out;
