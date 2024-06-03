@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   getData(defaultUrl);
   input.focus();
 });
-
 search.addEventListener("click", function (event) {
   event.preventDefault();
   const valueSearch = input.value.trim();
@@ -22,12 +21,12 @@ search.addEventListener("click", function (event) {
     getData(searchUrl);
   }
 });
-//menuHamburguesa
 abrir.addEventListener("click", () => {
   nav.classList.add("nav-visible");
 });
-cerrar.addEventListener("click", () => {
+cerrar.addEventListener("click", (e) => {
   nav.classList.remove("nav-visible");
+  
 });
 
 //abrir y cerrar modal
@@ -99,8 +98,9 @@ function openModal(photo, name, alt_description) {
   const modal = document.createElement("div");
   modal.classList.add("modal");
 
+
   const containerInfoImg = document.createElement("div");
-  containerInfoImg.classList.add("container-info-img");
+  containerInfoImg.classList.add("container-info-img", "animate__animated", "animate__zoomIn");
 
   const modalImage = document.createElement("img");
   modalImage.classList.add("img-content");

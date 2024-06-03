@@ -564,4 +564,55 @@ container imagenes section {
     overflow-y: hidden;
     max-width: 100%;
   }
+  .cardImg:hover .title-img {
+    opacity: 0;
+  }
+
+  .container-info-img {
+    background: #3043528c;
+    background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
+    background: linear-gradient(to right, #d7d2cce5, #304352);
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 8px 10px 11px -1px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 8px 10px 11px -1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 8px 10px 11px -1px rgba(0, 0, 0, 1);
+    margin: auto;
+  }
+  .img-content {
+    background-image: url(./img/ejemplomodal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    width: 200px;
+    border-radius: 20px;
+    border: none;
+  }
+  .info-modal {
+    background-color: #b8070700;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: "PT Sans", sans-serif;
+    color: rgb(255, 255, 255);
+  }
+  .title-modal {
+    font-family: "Poetsen One", sans-serif;
+    background-color: #c5101000;
+    height: 100px;
+    font-size: 30px;
+  }
+  .title-h3-modal {
+    font-size: 20px;
+    font-family: "Poetsen One", sans-serif;
+  }
+
+  .title-description-modal {
+    font-size: 17px;
+    text-align: left;
+  }
 }
