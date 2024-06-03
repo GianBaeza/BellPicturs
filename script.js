@@ -7,15 +7,10 @@ const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
-abrir.addEventListener("click", () => {
-  nav.classList.add("nav-visible");
-});
-cerrar.addEventListener("click", () => {
-  nav.classList.remove("nav-visible");
-});
 document.addEventListener("DOMContentLoaded", function () {
   getNav(navLinks);
-  getData("interior casas");
+  const defaultUrl = buildUrl("interior casas");
+  getData(defaultUrl);
   input.focus();
 });
 
@@ -23,13 +18,24 @@ search.addEventListener("click", function (event) {
   event.preventDefault();
   const valueSearch = input.value.trim();
   if (valueSearch) {
-    getData(valueSearch);
+    const searchUrl = buildUrl(valueSearch);
+    getData(searchUrl);
   }
 });
-
-function getData(value) {
+//menuHamburguesa
+abrir.addEventListener("click", () => {
+  nav.classList.add("nav-visible");
+});
+cerrar.addEventListener("click", () => {
+  nav.classList.remove("nav-visible");
+});
+// urlFetch
+function buildUrl(query) {
   const per_page = 20;
-  const url = `https://api.unsplash.com/search/photos?&query=${value}&client_id=${API_KEY}&per_page=${per_page}`;
+  return `https://api.unsplash.com/search/photos?&query=${query}&client_id=${API_KEY}&per_page=${per_page}`;
+}
+//data de  la api
+function getData(url) {
   fetch(url, {
     method: "GET",
     headers: {
@@ -58,7 +64,7 @@ function getData(value) {
       console.error("Error fetching data:", error);
     });
 }
-
+//mostramos img
 function displayImages(imgData) {
   containerGallery.innerHTML = "";
 
@@ -81,20 +87,16 @@ function displayImages(imgData) {
   });
 }
 
-//modal Imagenes
-function showModal() {
-  const modal = document.getElementById("modal");
-  const modalImage = document.getElementById("modal-image");
-  containerGallery.forEach((card) => {});
-}
+// ModalImagenes
+function showModal() {}
 
-//funciones nav
-function getNav(nav) {
-  nav.forEach(function (link) {
+// Funcionesnav
+function getNav(navLinks) {
+  navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       const section = link.id;
-
-      getData(section);
+      const sectionUrl = buildUrl(section);
+      getData(sectionUrl);
     });
   });
 }
