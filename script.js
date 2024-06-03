@@ -26,7 +26,6 @@ abrir.addEventListener("click", () => {
 });
 cerrar.addEventListener("click", (e) => {
   nav.classList.remove("nav-visible");
-  
 });
 
 //abrir y cerrar modal
@@ -98,9 +97,12 @@ function openModal(photo, name, alt_description) {
   const modal = document.createElement("div");
   modal.classList.add("modal");
 
-
   const containerInfoImg = document.createElement("div");
-  containerInfoImg.classList.add("container-info-img", "animate__animated", "animate__zoomIn");
+  containerInfoImg.classList.add(
+    "container-info-img",
+    "animate__animated",
+    "animate__zoomIn"
+  );
 
   const modalImage = document.createElement("img");
   modalImage.classList.add("img-content");
@@ -132,11 +134,14 @@ function openModal(photo, name, alt_description) {
   document.body.appendChild(modal);
 
   modal.style.display = "flex";
+  
   document.addEventListener("click", closeModal);
+  document.addEventListener("keydown", closeModal);
 }
+
 function closeModal(e) {
   const modal = document.querySelector(".modal");
-  if (e.target === modal) {
+  if (e.target === modal || e.key === "Escape") {
     modal.classList.remove("modal");
     modal.parentNode.removeChild(modal);
   }
