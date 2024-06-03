@@ -82,7 +82,6 @@ function displayImages(imgData) {
     img.classList.add("img");
     img.addEventListener("click", function () {
       openModal(photo, name, alt_description);
-      document.querySelector("#parrafoPrincipal").style.color = "rgba(255, 255, 255, 0.438)";
     });
 
     const title = document.createElement("h3");
