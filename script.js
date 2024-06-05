@@ -28,8 +28,6 @@ cerrar.addEventListener("click", (e) => {
   nav.classList.remove("nav-visible");
 });
 
-//abrir y cerrar modal
-
 // urlFetch
 function buildUrl(query) {
   const per_page = 20;

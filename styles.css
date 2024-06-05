@@ -287,6 +287,46 @@ container imagenes section {
   cursor: pointer;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #413e3ea9;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+footer ul li {
+  padding-top: 5px;
+}
+footer ul li ::before {
+  content: "- ";
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer h3 {
+  background-color: #00000000;
+  font-size: 20px;
+  color: #c2bebe;
+  height: 30px;
+  margin: auto;
+}
 @media only screen and (max-width: 850px) {
   .title {
     background-color: #00000000;
@@ -614,5 +654,37 @@ container imagenes section {
   .title-description-modal {
     font-size: 17px;
     text-align: left;
+  }
+  footer {
+    background-color: #413e3ea9;
+    justify-content: space-between;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  footer ul li ::before {
+    content: "- ";
+  }
+
+  footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  footer h3 {
+    background-color: #00000000;
+    font-size: 15px;
+    color: #c2bebe;
+    flex-wrap: wrap;
   }
 }
