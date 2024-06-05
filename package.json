@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@sweetalert2/themes": "^5.0.16",
     "animate.css": "^4.1.1",
-    "pexels": "^1.4.0"
+    "pexels": "^1.4.0",
+    "sweetalert2": "^11.11.1"
   }
 }

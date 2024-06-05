@@ -20,13 +20,14 @@
     <h1><a class="title" href="../index.html">BellPicturs</a></h1>
     <div class="Container-Form">
       <img src="../img/pexels-ivan-samkov-4899529.jpg" alt="imgForm" />
-      <form>
+
+      <form id="form">
         <h1>Contacto</h1>
-        <label for="nombre" id="name" name=" name" class="valor">Nombre</label>
-        <input type="text" id="name" name="name" required />
+        <label for="nombre" name=" name" class="valor">Nombre</label>
+        <input type="text" id="name" name="name" class="item" />
 
         <label for="email" class="valor">Correo Electronico</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" class="item" />
 
         <label for="comentarios" class="valor">Comentarios:</label><br />
         <textarea
@@ -35,8 +36,11 @@
           rows="4"
           cols="50"
         ></textarea>
-        <button type="submit">Enviar</button>
+        <button type="submit" id="Enviar">Enviar</button>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../components/form.js"></script>
   </body>
 </html>
