@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Formulario</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Poetsen+One&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Styless/contacto.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <h1><a class="title" href="../index.html">BellPicturs</a></h1>
+    <div class="Container-Form">
+      <img src="../img/pexels-ivan-samkov-4899529.jpg" alt="imgForm" />
+      <form>
+        <h1>Contacto</h1>
+        <label for="nombre" id="name" name=" name" class="valor">Nombre</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email" class="valor">Correo Electronico</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="comentarios" class="valor">Comentarios:</label><br />
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          rows="4"
+          cols="50"
+        ></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
 </html>

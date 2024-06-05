@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poetsen One", sans-serif;
+}
+body {
+  display: flex;
+  margin: auto;
+  background-image: url(../img/pexels-content-pixie-1405717-4103438.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.title {
+  background-color: #e20b0b00;
+  text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.433);
+  font-size: 50px;
+  color: #000;
+  user-select: none;
+  font-family: "Satisfy", cursive;
+  text-decoration: none;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+.Container-Form {
+  background-color: #a3313100;
+  width: 50%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 100px;
+  -webkit-box-shadow: 10px 10px 2px -1px rgba(0, 0, 0, 0.78);
+  -moz-box-shadow: 10px 10px 2px -1px rgba(0, 0, 0, 0.78);
+  box-shadow: 10px 10px 2px -1px rgba(0, 0, 0, 0.78);
+  border-radius: 20px;
+}
+
+.Container-Form img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  background-color: rgba(0, 255, 255, 0);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+form {
+  background-color: #f9f0df;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+h1 {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+}
+.valor {
+  padding: 10px;
+}
+label {
+  background-color: rgba(0, 255, 255, 0);
+  padding-left: 10px;
+  font-size: 20px;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+input {
+  background-color: rgba(0, 255, 255, 0);
+  height: 30px;
+  border: none;
+  width: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  padding: 10px;
+}
+
+input[type="email"],
+input[type="text"]:focus {
+  background-color: rgba(0, 255, 255, 0);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+textarea {
+  background-color: rgba(0, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  padding: 10px;
+  height: auto;
+}
+
+button {
+  background-color: #00000005;
+  margin-top: 30px;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px solid;
+  cursor: pointer;
+}
