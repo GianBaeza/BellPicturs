@@ -29,17 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "El mensaje se envió correctamente.",
           icon: "success",
           customClass: {
-            container: "my-modal-container",
-            title: "my-modal-title",
-            content: "my-modal-content",
-            confirmButton: "my-modal-confirm-button",
+            confirmButton: "custom-ok-button",
           },
-
-          showConfirmButton: true,
-          confirmButtonColor: "#F9F0DF",
-          confirmButtonClass: "my-modal-confirm-button",
-          confirmButtonText: "OK"
-          
         });
       } else {
         Swal.fire({

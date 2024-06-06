@@ -100,34 +100,14 @@ button {
   align-self: center;
 }
 
-.my-modal-container {
-  border: 2px solid #2ecc70;
-  border-radius: 10px;
-  background-color: #575757;
-}
+.swal2-confirm.custom-ok-button {
+  background-color: #f9f0df !important;
+  color: #000000ce !important;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.466);
 
-.my-modal-title,
-.my-modal-confirm-button {
-  font-size: 24px;
-}
-
-.my-modal-title {
-  color: #2ecc70dc;
-}
-
-.my-modal-confirm-button {
-  background-color: #f9f0df;
-  color: #000;
   border-radius: 5px;
 }
-
-.swal2-backdrop {
-  background-color: rgba(249, 240, 223, 0);
-  background-position: left top;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-}
-
 .error-inputs {
   border-color: red;
 }
