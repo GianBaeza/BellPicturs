@@ -113,8 +113,17 @@ button {
 }
 
 @media only screen and (max-width: 550px) {
+  .Container-Form {
+    margin-top: 80px;
+    height: auto;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0);
+    box-shadow: none;
+  }
+
   form {
     position: relative;
+  
   }
 
   .Container-Form img {
