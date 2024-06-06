@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#form");
   const nombre = document.querySelector("#name");
-  const correo = document.querySelector("#email");
   const mensaje = document.querySelector("#comentarios");
+  const correo = document.querySelector("#email");
+  const items = document.querySelectorAll(".item");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (checkInputs()) {
-      sendEmail();
-    }
+    if (checkInputs(items)) return sendEmail();
   });
 
   function sendEmail() {
@@ -23,26 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
       Subject: "This is the subject",
       Body: bodyMensaje,
     }).then((message) => {
-      if (message !== "OK") {
+      if (message === "OK") {
+        Swal.fire({
+          width: "400px",
+          title: "Envío Exitoso",
+          text: "El mensaje se envió correctamente.",
+          icon: "success",
+          customClass: {
+            container: "my-modal-container",
+            title: "my-modal-title",
+            content: "my-modal-content",
+            confirmButton: "my-modal-confirm-button",
+          },
+
+          showConfirmButton: true,
+          confirmButtonColor: "#F9F0DF",
+          confirmButtonClass: "my-modal-confirm-button",
+          confirmButtonText: "OK"
+          
+        });
+      } else {
         Swal.fire({
           title: "Error",
           text: "Hubo un problema al enviar el mensaje",
           icon: "error",
         });
-      } else {
-        Swal.fire({
-          title: "Envio con Exito",
-          text: "El mensaje se envio con exito",
-          icon: "success",
-        });
       }
     });
   }
 
-  function checkInputs() {
-    const items = document.querySelectorAll(".item");
+  function checkInputs(items) {
     let allValid = true;
-
     items.forEach((item) => {
       if (
         item.tagName.toLowerCase() === "input" ||
@@ -57,29 +67,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       item.addEventListener("keyup", () => {
-        if (item.value !== "") {
-          item.classList.remove("error-inputs");
-        } else {
+        if (item.value === "") {
           item.classList.add("error-inputs");
+        } else {
+          item.classList.remove("error-inputs");
         }
       });
     });
-    //validamos el campo de correo
-    if (!checkEmail(correo)) {
+
+    if (!isCorreo(correo)) {
       allValid = false;
     }
 
     return allValid;
   }
-
-  function checkEmail(correo) {
-    const regex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
-    if (!correo.value.match(regex)) {
-      correo.classList.add("error-inputs");
-      return false;
-    } else {
+  function isCorreo(correo) {
+    const correoNormalizado = String(correo.value).toLowerCase();
+    const regex =
+      /^[a-zA-Z0-9._-]+@(gmail|hotmail|yahoo|outlook|aol|icloud|protonmail|yandex|mail|inbox)\.[a-zA-Z]{2,6}$/;
+    if (regex.test(correoNormalizado)) {
       correo.classList.remove("error-inputs");
       return true;
+    } else {
+      correo.classList.add("error-inputs");
     }
   }
 });

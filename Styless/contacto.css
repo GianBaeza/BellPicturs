@@ -4,14 +4,18 @@
   box-sizing: border-box;
   font-family: "Poetsen One", sans-serif;
 }
+
 body {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-image: url(../img/pexels-content-pixie-1405717-4103438.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
 }
+
 .title {
   background-color: #e20b0b00;
   text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.433);
@@ -21,94 +25,141 @@ body {
   font-family: "Satisfy", cursive;
   text-decoration: none;
   position: absolute;
-  left: 50px;
   top: 30px;
+  left: 50px;
 }
+
 .Container-Form {
-  background-color: #a3313100;
-  width: 50%;
-  height: 700px;
+  background-color: #2ecc7000;
   display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-top: 100px;
-  -webkit-box-shadow: 10px 10px 2px -1px rgba(0, 0, 0, 0.78);
-  -moz-box-shadow: 10px 10px 2px -1px rgba(0, 0, 0, 0.78);
-  box-shadow: 10px 10px 2px -1px rgba(0, 0, 0, 0.78);
+  align-items: flex-start;
+  max-width: 800px;
+  margin-top: 10px;
   border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .Container-Form img {
+  flex: 0 0 auto;
   width: 50%;
-  height: auto;
-  object-fit: cover;
-  background-color: rgba(0, 255, 255, 0);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
 form {
   background-color: #f9f0df;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
+  padding: 36px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  background-color: rgba(0, 0, 0, 0);
   text-align: center;
-  padding: 10px;
   font-size: 40px;
+  margin-bottom: 20px;
 }
+
 .valor {
   padding: 10px;
 }
+
 label {
-  background-color: rgba(0, 255, 255, 0);
-  padding-left: 10px;
   font-size: 20px;
-  margin-top: 30px;
-  padding-top: 30px;
+  margin-top: 20px;
 }
 
-input {
-  background-color: rgba(0, 255, 255, 0);
-  height: 30px;
-  border: none;
-  width: auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
-  padding: 10px;
-}
-
-input[type="email"],
-input[type="text"]:focus {
-  background-color: rgba(0, 255, 255, 0);
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
-}
-.error-inputs {
-  border-bottom: 1px solid red;
-}
-
+input,
 textarea {
-  background-color: rgba(0, 255, 255, 0);
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+  width: 100%;
   padding: 10px;
-  height: auto;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+  background-color: #f9f0df;
+}
+
+input#name:focus,
+input#email:focus,
+textarea::-webkit-input-placeholder:focus {
+  background-color: #f9f0df;
+  outline: none;
 }
 
 button {
-  background-color: #00000005;
-  margin-top: 30px;
   width: 120px;
   height: 40px;
   border-radius: 10px;
-  margin: auto;
-  border: 1px solid;
+  margin-top: 20px;
   cursor: pointer;
+  align-self: center;
+}
+
+.my-modal-container {
+  border: 2px solid #2ecc70;
+  border-radius: 10px;
+  background-color: #575757;
+}
+
+.my-modal-title,
+.my-modal-confirm-button {
+  font-size: 24px;
+}
+
+.my-modal-title {
+  color: #2ecc70dc;
+}
+
+.my-modal-confirm-button {
+  background-color: #f9f0df;
+  color: #000;
+  border-radius: 5px;
+}
+
+.swal2-backdrop {
+  background-color: rgba(249, 240, 223, 0);
+  background-position: left top;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.error-inputs {
+  border-color: red;
+}
+
+@media only screen and (max-width: 550px) {
+  form {
+    position: relative;
+  }
+
+  .Container-Form img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    transition: z-index 0.5s ease;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  button {
+    width: 100px;
+    height: 30px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
 }
